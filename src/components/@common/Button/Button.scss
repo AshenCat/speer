@@ -1,0 +1,66 @@
+.btn-container {
+    padding: 15px;
+    width: fit-content;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all .5s;
+    backdrop-filter: blur(15px);
+    &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    .btn-rgb-lights {
+        
+        font-weight: 400;
+        letter-spacing: 3px;
+        padding: 2px 5px;
+        position: relative;
+        user-select:none;
+        
+        &::after {
+            background: transparent !important;
+        }
+
+        &::after, &::before { 
+            content: "";
+            position: absolute;
+            mix-blend-mode:hard-light;
+        }
+        &::before {
+            top: 50%;
+            left: 50%;
+            background-color: hsla(88, 50%, 62%, 0.658);
+            box-shadow: 0 2em 2em 1em hsla(0, 1%, 65%, 0.616),
+                        -4em 1em 2em 3em hsla(36, 100%, 76%, 0.537),
+                        0 -2em 2em 2em hsla(88, 98%, 64%, 0.624),
+                        -1em -2em 2em 2em hsla(17, 100%, 50%, 0.533),
+                        -2em 3em 2em 3em hsla(140, 100%, 81%, 0.653),
+                        0 1em 2em 4em hsla(337, 100%, 57%, 0.425);
+            animation: bshadow 5s linear infinite;
+        }
+
+    }
+}
+
+        
+@keyframes bshadow {
+        
+    33% {
+        box-shadow: 0 -2em 2em 3em hsla(187, 54%, 30%, 0.315),
+              1em 1em 3em 3em hsla(140, 100%, 75%, 0.603),
+              2em 3em 2em 2em hsla(312, 100%, 56%, 0.616),
+              -2em -2em 2em 2em hsla(194, 79%, 33%, 0.473),
+              0 2em 2em 2em hsla(17, 100%, 50%, 0.533),
+              2em 1em 2em 2em hsla(337, 100%, 57%, 0.425);
+    }
+
+    66% {
+        box-shadow: 2em 1em 2em 2em hsla(337, 100%, 57%, 0.425),
+              2 -1em 2em 1em hsla(17, 46%, 49%, 0.6),
+              -1em -1em 3em 3em hsla(140, 100%, 75%, 0.603),
+              2em 2em 2em 2em hsla(133, 100%, 50%, 0.658),
+              0 -2em 2em 1em hsla(88, 50%, 62%, 0.458),
+              -2em -1em 2em 3em hsla(271, 55%, 56%, 0.6);
+    }
+}
