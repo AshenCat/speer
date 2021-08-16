@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/speer/static/css/main.303f71c6.chunk.css",
+    "main.js": "/speer/static/js/main.e3c40d8e.chunk.js",
+    "main.js.map": "/speer/static/js/main.e3c40d8e.chunk.js.map",
+    "runtime-main.js": "/speer/static/js/runtime-main.e4107795.js",
+    "runtime-main.js.map": "/speer/static/js/runtime-main.e4107795.js.map",
+    "static/js/2.80127c06.chunk.js": "/speer/static/js/2.80127c06.chunk.js",
+    "static/js/2.80127c06.chunk.js.map": "/speer/static/js/2.80127c06.chunk.js.map",
+    "static/js/3.f446fd80.chunk.js": "/speer/static/js/3.f446fd80.chunk.js",
+    "static/js/3.f446fd80.chunk.js.map": "/speer/static/js/3.f446fd80.chunk.js.map",
+    "index.html": "/speer/index.html",
+    "static/css/main.303f71c6.chunk.css.map": "/speer/static/css/main.303f71c6.chunk.css.map",
+    "static/js/2.80127c06.chunk.js.LICENSE.txt": "/speer/static/js/2.80127c06.chunk.js.LICENSE.txt",
+    "static/media/Menu.56002158.svg": "/speer/static/media/Menu.56002158.svg",
+    "static/media/SmallSpeaker1-03.6b61794a.png": "/speer/static/media/SmallSpeaker1-03.6b61794a.png",
+    "static/media/SmallSpeaker2-03.79194761.png": "/speer/static/media/SmallSpeaker2-03.79194761.png",
+    "static/media/distortion.c9751b3a.jpg": "/speer/static/media/distortion.c9751b3a.jpg",
+    "static/media/medium17.771514b8.png": "/speer/static/media/medium17.771514b8.png",
+    "static/media/medium27.f22c4155.png": "/speer/static/media/medium27.f22c4155.png",
+    "static/media/sample.bb19bb44.wav": "/speer/static/media/sample.bb19bb44.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4107795.js",
+    "static/js/2.80127c06.chunk.js",
+    "static/css/main.303f71c6.chunk.css",
+    "static/js/main.e3c40d8e.chunk.js"
+  ]
+}
