@@ -7,17 +7,22 @@
     overflow: hidden;
     transition: all .5s;
     backdrop-filter: blur(15px);
+    padding: 15px 40px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     &:hover, &:focus {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.4);
+        
+        color: #000;
     }
     .btn-rgb-lights {
-        
+        color: inherit;
         font-weight: 400;
         letter-spacing: 3px;
         padding: 2px 5px;
         position: relative;
         user-select:none;
-        
+
         &::after {
             background: transparent !important;
         }
@@ -32,11 +37,11 @@
             left: 50%;
             background-color: hsla(88, 50%, 62%, 0.658);
             box-shadow: 0 2em 2em 1em hsla(0, 1%, 65%, 0.616),
-                        -4em 1em 2em 3em hsla(36, 100%, 76%, 0.537),
+                        -4em 1em 2em 1em hsla(36, 100%, 76%, 0.537),
                         0 -2em 2em 2em hsla(88, 98%, 64%, 0.624),
                         -1em -2em 2em 2em hsla(17, 100%, 50%, 0.533),
-                        -2em 3em 2em 3em hsla(140, 100%, 81%, 0.653),
-                        0 1em 2em 4em hsla(337, 100%, 57%, 0.425);
+                        -2em 3em 2em 1em hsla(140, 100%, 81%, 0.653),
+                        0 1em 2em 2em hsla(337, 100%, 57%, 0.425);
             animation: bshadow 5s linear infinite;
         }
 
@@ -58,9 +63,9 @@
     66% {
         box-shadow: 2em 1em 2em 2em hsla(337, 100%, 57%, 0.425),
               2 -1em 2em 1em hsla(17, 46%, 49%, 0.6),
-              -1em -1em 3em 3em hsla(140, 100%, 75%, 0.603),
+              -1em -1em 3em 1em hsla(140, 100%, 75%, 0.603),
               2em 2em 2em 2em hsla(133, 100%, 50%, 0.658),
               0 -2em 2em 1em hsla(88, 50%, 62%, 0.458),
-              -2em -1em 2em 3em hsla(271, 55%, 56%, 0.6);
+              -2em -1em 2em 1em hsla(271, 55%, 56%, 0.6);
     }
 }
