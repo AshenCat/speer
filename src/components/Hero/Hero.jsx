@@ -67,6 +67,7 @@ function Hero() {
                     {/* <img ref={distortionRef} className="imageDistortion" src={Distortion} alt="distortion" /> */}
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.img
+                            style={imageIndex===2 ? {objectPosition: 'bottom'} : {}}
                             className="concert-img"
                             key={imgState} 
                             src={images[imageIndex]} 

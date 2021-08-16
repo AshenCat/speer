@@ -9,19 +9,18 @@ import { useRef } from 'react';
 
 function Sound() {
     const [playing, setPlaying] = useState(false);
+    const [speakerHovered, setSpeakerHovered] = useState(false);
     const divRef = useRef(null);
     let timeout;
     const onMouseMove = (e) => {
         divRef.current?.classList.add('sound-flt-div-moving')
         divRef.current?.classList.remove('sound-flt-div-not-moving')
-        console.log("mount class");
         var x = e.clientX;
         var y = e.clientY;
         divRef.current?.style.setProperty('--x', x-75 + 'px')
-        divRef.current?.style.setProperty('--y', y-120 + 'px')
+        divRef.current?.style.setProperty('--y', y-90 + 'px')
         clearTimeout(timeout);
         timeout = setTimeout(()=>{
-            console.log("unmount class");
             divRef.current?.classList.add('sound-flt-div-not-moving')
             divRef.current?.classList.remove('sound-flt-div-moving')
         }, 100);
@@ -30,23 +29,26 @@ function Sound() {
     }
 
     const toggle = () => {
-        if(!playing) {
-            document.getElementById("audio").play();
-        } else {
-            document.getElementById("audio").pause();
+        if(speakerHovered) {
+            if(!playing) {
+                document.getElementById("audio").play();
+            } else {
+                document.getElementById("audio").pause();
+            }
+            setPlaying(prev => !prev)
         }
-        
-        setPlaying(prev => !prev)
     }
 
     return (
         <div 
             className="sound"
             onMouseMove={onMouseMove}
-            onMouseLeave={onMouseLeave}>
+            onMouseLeave={onMouseLeave}
+            onClick={toggle}>
                 
-            <div className="sound-flt-div" ref={divRef}>
-                <span>📢🎶</span>
+            <div
+            onClick={toggle} className="sound-flt-div" ref={divRef}>
+                <span>📢{speakerHovered && '🎶'}</span>
             </div>
             <Nav 
                 svgOpen="soundSvgOpen"
@@ -63,8 +65,14 @@ function Sound() {
 
             <div className="sound-container">
                 <div className="right">
-                    <img className="speaker-img sleft" src={Speaker1} alt="speaker" onClick={toggle} />
-                    <img className="speaker-img sright" src={Speaker2} alt="speaker" onClick={toggle} />
+                    <img 
+                        onMouseOver={()=>setSpeakerHovered(true)}
+                        onMouseLeave={()=>setSpeakerHovered(false)}
+                        className="speaker-img sleft" src={Speaker1} alt="speaker" />
+                    <img 
+                        onMouseOver={()=>setSpeakerHovered(true)}
+                        onMouseLeave={()=>setSpeakerHovered(false)}
+                        className="speaker-img sright" src={Speaker2} alt="speaker" />
                 </div>
                 <div className="left">
                     <h1 className="sound-h">Superior Sound</h1>
